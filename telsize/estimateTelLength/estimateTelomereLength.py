@@ -158,6 +158,7 @@ def analyze_sequence_for_motif(string, motif, sequence_name, pic_format="png",
 	if not os.path.exists(folder):	
 		os.mkdir(folder)
 	sequence_name_clean = re.sub("/", "_", sequence_name) # in case slash is in the readname
+	sequence_name_clean = sequence_name_clean.split(" ")[0] #added May 25 2023 to account for the possibility of spaces in the read names.
 	output_image = folder + sequence_name_clean + "." + pic_format
 	#print(output_image)	
 	stringLength = len(string)

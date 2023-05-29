@@ -1,5 +1,6 @@
 #!/usr/bin/python
 
+import random #added May 25 2023
 import sys
 import os
 import time
@@ -172,7 +173,7 @@ if __name__ == "__main__":
 	formatter_class=argparse.ArgumentDefaultsHelpFormatter)
 	
 	currtime = int(time.time())
-	image_dir = "./img_" + str(currtime) + "/"
+	image_dir = "./img_" + str(currtime) + "_" + str(random.randint(1,100)) + "/"
 
 
 	parser.add_argument('fasta', metavar='fasta', type=str, nargs=1,
